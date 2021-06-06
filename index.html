@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculadora</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+
+<table>
+
+  <!-- HISTORICO + VISOR DA CALCULADORA -->
+  
+  <tr>
+    <td class="history" colspan="4">
+      <span id="history"></span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <input type="text" name="visor" id="visor" value="0" disabled>
+    </td>
+  </tr>
+
+
+  <!-- TECLADO DA CALCULADORA -->
+
+  <tr class="row">
+    <td class="column">
+      <input type="button" class="btn" name="op" value="%" onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="CE" onclick="clearOp(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="CA" onclick="clearOp(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="CH" onclick="clearOp(this.value)">
+    </td>
+  </tr>
+  <tr class="row">
+    <td class="column">
+      <input type="button" class="btn" value="1/x" onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="x²" onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="sqrt" onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="op" value="/" onclick="calcOp(this.value)">
+    </td>
+  </tr>
+  <tr class="row">
+    <td class="column"> 
+      <input type="button" class="btn" name="num" value="7" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="8" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="9" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="op" value="*" onclick="calcOp(this.value)">
+    </td>
+  </tr>
+  <tr class="row">
+    <td class="column">
+      <input type="button" class="btn" name="num" value="4" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="5" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="6" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="op" value="-" onclick="calcOp(this.value)">
+    </td>
+  </tr>
+  <tr class="row">
+    <td class="column">
+      <input type="button" class="btn" name="num" value="1" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="2" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="3" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="op" value="+" onclick="calcOp(this.value)">
+    </td>
+  </tr>
+  <tr class="row">
+    <td class="column">
+      <input type="button" class="btn" value="+/-" onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="num" value="0" onclick="calcNum(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" value="," onclick="calcFormat(this.value)">
+    </td>
+    <td class="column">
+      <input type="button" class="btn" name="op" value="=" onclick="calcOp(this.value)">
+    </td>
+  </tr>
+</table>
+    <script src="script.js"></script>
+  </body>
+</html>
